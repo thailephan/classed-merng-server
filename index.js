@@ -7,12 +7,7 @@ const mongoose = require('mongoose');
 
 const resolvers = require('./graphql/resolvers');
 const typeDefs = require('./graphql/typeDefs');
-const {
-	MONGODB_CLOUD,
-	MONGODB_LOCAL,
-	PASS,
-	USER,
-} = require('./config');
+const { MONGODB_CLOUD, PASS, USER } = require('./config');
 
 const pubsub = new PubSub();
 
@@ -25,13 +20,6 @@ const server = new ApolloServer({
 });
 
 mongoose
-	// .connect(MONGODB_LOCAL, {
-	// 	dbName: 'merng',
-	// 	useNewUrlParser: true,
-	// 	useUnifiedTopology: true,
-	// })
-
-	// Connect for ATLAS MONGODB
 	.connect(MONGODB_CLOUD, {
 		dbName: 'merng',
 		user: USER,
