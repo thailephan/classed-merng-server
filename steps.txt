@@ -1,0 +1,33 @@
+//
+!! : options
+! : do cmd in linux -> find the way to write cmd in windows or do some the same actions
+# : note
+* :  not follow the tutorial, but it still need cause I config it
+//
+!! Run 'npx eslint --init' to create eslint file for project. Can config the rules follow what we define
+---Server
+npm init -y
+!touch index.js .gitignore
+npm install apollo-server graphql mongoose@5.11.15
+
+npm install --save-dev nodemon
+npm install bcryptjs jsonwebtoken
+
+##GraphQL
+#Query
+#Mutation
+#Subscription
+
+---Client
+npx create-react-app client
+//Can use yarn add instead cause when run npx it has install yarn
+
+npm install @apollo/react-hooks apollo-cache-inmemory apollo-link-http apollo-client
+npm install react-router-dom semantic-ui-css semantic-ui-react
+npm install graphql graphql-tag
+npm install moment
+
+*npm install prop-types
+
+npm install jwt-decode
+npm install apollo-link-context

@@ -1,0 +1,12 @@
+Mutation {
+  [function_name]: (parent, args, context, info)
+}
+
+parent: the data from the step before. Like 1st step has username like gg,
+  parent is {username: username}, we use it to check does user exists, and
+  move to the next step if it has, when we login to GG
+
+Dieu chinh menu theo link
+const pathname = window.location.pathname;
+
+const path = pathname === '/' ? 'home' : pathname.substr(1)
